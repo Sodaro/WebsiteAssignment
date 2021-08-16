@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sv">
+<!--tecken format, css, titel för sidan -->
+
+<head>
+    <meta charset="UTF-8" name="viewport"
+        content="width = device-width, initial-scale = 1, maximum-scale = 2" />
+    <link rel="stylesheet" href="../stylesheets/normalize.css">
+    <link rel="stylesheet" href="../stylesheets/djupvik.css">
+    <title>Djupviks Hamn | Kontak</title>
+</head>
+
+<body>
+    <!--en div för att hålla allt samlat-->
+    <div id="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Hem</a>
+                </li>
+                <li>
+                    <a href="gastplats.html">Gästplats</a>
+                </li>
+                <li>
+                    <a href="historia.html">Historia</a>
+                </li>
+                <li>
+                    <a href="medlemsinfo.html">Medlemsinfo</a>
+                </li>
+                <li>
+                    <a href="turistmal.html">Turistmål</a>
+                </li>
+                <li>
+                    <a href="kontakt.html">Kontakt</a>
+                </li>
+                <li>
+                    <a href="english.html">English Summary</a>
+                </li>
+            </ul>
+        </nav>
+        <!--main för sid innehållet-->
+        <main>
+            <h1>Kontaktuppgifter</h1>
+            <p>Hamnfogde Bo Lautin, mobil 0707-920310</p>
+            <p>Djupviks hamnförening<br>
+                c/o Ekholm<br>
+                Eksta Hägur 170<br>
+                623 54 Klintehamn</p>
+
+            <form id="contact" class="contact">
+                <h2>Kontaktformulär</h2>
+                <p>Fält markerade med (*) är obligatoriska</p>
+                <fieldset>
+                    <legend>Ärende</legend>
+                    <div class="contact">
+                        <label class="contact" for="title">Ärende (*)</label>
+                        <input class="contact" type="text" id="title"
+                            name="title" value="" required>
+                    </div>
+
+                    <div class="contact">
+                        <label class="contact" for="description">Beskrivning
+                            (*)</label>
+                        <input class="contact" type="text" id="description"
+                            name="description" value="" required><br>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Ärende kategori (*):</legend>
+                    <div class="contact">
+                        <label class="radio" for="batplats">Båtplats</label>
+                        <input class="radio" type="radio" id="batplats"
+                            name="topic" required value="batplats">
+                    </div>
+
+                    <div class="contact">
+                        <label class="radio" for="medlem">Medlem</label>
+                        <input class="radio" type="radio" id="medlem"
+                            name="topic" value="medlem">
+                    </div>
+
+                    <div class="contact">
+                        <label class="radio" for="ovrigt">Övrigt</label>
+                        <input class="radio" type="radio" id="ovrigt"
+                            name="topic" value="ovrigt">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Kontakt metod:</legend>
+                    <div class="contact">
+                        <label class="contact" for="mail">E-post</label>
+                        <input class="contact" type="email" id="mail"
+                            name="mail" value="">
+                    </div>
+   
+                    <div class="contact">
+                        <label class="contact" for="phone">Mobilnummer</label>
+                        <input class="contact" type="tel" id="phone"
+                            name="phone" value="">
+                    </div>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+            <footer>
+                <hr>
+                <p>&copy; Copyright Djupvikshamn.se | info@djupvikshamn.se</p>
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>

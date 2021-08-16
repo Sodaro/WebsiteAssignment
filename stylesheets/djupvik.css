@@ -1,0 +1,223 @@
+:root {
+    --main-bg-color1: #fdf6d5;
+    --main-bg-color2: #D6F2F9;
+    --main-font-color:#0d0d0d;
+    --main-border-color: #8fafc5;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/static/Raleway-Regular.ttf);
+}
+
+#container{
+    margin: 0 auto;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+a:link, a:visited, a:active{
+    color: #0d0d0d;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+nav>ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: block;
+    width: 140px;
+    background: var(--main-bg-color2);
+    border: 1px solid var(--main-border-color);
+    margin-bottom: 0.5em;
+    padding: 0.25em;
+}
+
+body{
+    font-family: "Raleway";
+    color: var(--main-font-color);
+    background-color: var(--main-bg-color1)
+}
+article, div.weather{
+    background-color: var(--main-bg-color2);
+    border-radius: 10px;
+    border: 3px solid var(--main-border-color);
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+/* article.turistmal{
+    border-style: outset;
+} */
+article.news{
+    border-radius: 10px;
+    border: 3px solid var(--main-border-color);
+    padding: 1em;
+    margin-bottom: 1em;
+}
+article>figure{
+    margin-left: 0;
+}
+
+h1, h2, h3{
+    margin-top: 0;
+}
+
+/* div.weather{
+    border-radius: 10px;
+    border: 3px solid var(--main-border-color);
+    background-color: var(--main-bg-color2)
+} */
+table, thead, tbody, th, td, tr {
+    display: block;
+}
+th{
+    display: none;
+}
+thead tr {
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+}
+td {
+  border: none;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 50%;
+}
+
+td:before {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 45%;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+tr{
+    margin-bottom: 1em;
+}
+
+td:nth-of-type(1):before { content: "Förnamn"; }
+td:nth-of-type(2):before { content: "Efternamn"; }
+td:nth-of-type(3):before { content: "Mail"; }
+td:nth-of-type(4):before { content: "Telefonnummer"; }
+
+
+div.contact{
+    margin-top: 0.5em;
+}
+
+label.contact{
+    display:block;
+    width: 100%;
+}
+fieldset{
+    width: 80%;
+    background-color: var(--main-bg-color2);
+    border-style: outset;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/*Non-Mobile*/
+@media(min-width: 801px)
+{
+    table{
+        display: table;
+        border-collapse: separate;
+        border-spacing: 2px;
+        border-color: gray;
+    }
+    tbody{
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+        position: initial;
+    }
+    td{
+        display: table-cell;
+        vertical-align: inherit;
+        padding-left: 0;
+    }
+    th{
+        display: table-cell;
+        vertical-align: inherit;
+        font-weight: bold;
+        text-align: left;
+        position: inherit;
+    }
+    td:before{
+        display: none;
+    }
+    tr{
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit;
+        position: relative;
+    }
+
+    thead{
+        display: table-header-group;
+        vertical-align: middle;
+        border-color: inherit;  
+    }
+
+    body{
+        text-align: left;
+        justify-content: left;
+        font-size: large;
+    }
+    #container {
+        display:flex;
+        margin-top: 2em;
+    }
+    nav{
+        margin-right: 2em;
+    }
+    fieldset{ 
+        width: 24em;
+        margin-bottom: 0.5em;
+    }
+    div.contact{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 0.5fr;
+        margin-bottom: 1em;
+        text-align: right;
+        margin-top: 0;
+        /* margin-bottom: 5em;*/    
+        column-gap: 0.5em; 
+    }
+    label.contact{
+        grid-column: 1;
+        /*float:left;*/
+    }
+    input.contact{
+        grid-column: 2;
+        /*float:right;*/
+    }
+    input.radio{
+        grid-column: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*float:right;*/
+    }
+
+    nav ul {
+    width: 100%;
+    }
+
+
+}
